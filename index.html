@@ -2,39 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Freedom Wall</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freedom Wall - A Confession</title>
-    
-    <!-- Google Fonts for handwritten style -->
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome for pushpin and sparkle icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Background with subtle texture -->
-    <div class="cork-background"></div>
-    
-    <!-- Sparkle container for floating animations -->
-    <div class="sparkles-container" id="sparklesContainer"></div>
-    
-    <!-- Main container for sticky notes -->
-    <main class="notes-container">
-        
-        <!-- Center Main Note - Freedom Wall Title -->
-        <div class="sticky-note main-note" data-delay="0">
-            <div class="pushpin"></div>
-            <div class="note-content">
-                <h1 class="main-title">Freedom Wall</h1>
-                <p class="main-subtitle">A confession by Jem</p>
-            </div>
+
+    <div class="board">
+
+        <h1 class="title">Freedom Wall</h1>
+        <p class="subtitle">A confession by YOUR_NAME</p>
+
+        <!-- Sticky Notes -->
+        <div class="note yellow">I never said it, but you meant a lot to me.</div>
+        <div class="note pink">Some feelings don’t disappear, they just become quiet.</div>
+        <div class="note blue">I hope you’re happy. Truly.</div>
+        <div class="note white">You were my favorite “what if.”</div>
+
+        <!-- Hidden Confession -->
+        <div class="note big hidden" id="secretNote">
+            If I ever had the courage before, I would’ve told you how much you mattered to me.
+            This is my quiet way of finally saying it.
         </div>
-        
-        <!-- Sticky Note 1 - Yellow -->
-        <div class="sticky-note note-yellow" data-delay="1">
-            <div class="pushpin"></div>
+
+        <button id="revealBtn">Open My Heart</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>            <div class="pushpin"></div>
             <p class="note-text">I remember every little thing you said...</p>
         </div>
         
