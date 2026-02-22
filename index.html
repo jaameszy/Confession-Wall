@@ -1,47 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Freedom Wall</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freedom Wall Confessions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .confession-container {
+            width: 90%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; } to { opacity: 1; }
+        }
+        .sticky-note {
+            background: url('https://via.placeholder.com/150/FFE5B4/000000?text=Sticky+Note') no-repeat;
+            background-size: cover;
+            width: 200px;
+            height: 150px;
+            margin: 20px auto;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .sticky-note:hover {
+            transform: scale(1.05);
+        }
+        .confession {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            transition: all 0.5s ease;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #FF6F61;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #FF3D3D;
+        }
+        @media (max-width: 600px) {
+            .sticky-note {
+                width: 150px;
+            }
+            button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-<div class="background"></div>
-
-<div class="container">
-
-<h1 class="title">🌸 Freedom Wall</h1>
-<p class="subtitle">A confession by Jem</p>
-
-<div class="notes">
-
-<div class="note">I never said it, but you meant a lot to me.</div>
-<div class="note">Some feelings stay quietly inside the heart.</div>
-<div class="note">I hope you are happy, even without me.</div>
-<div class="note">You were my softest memory.</div>
-
-</div>
-
-<div class="hidden-note" id="secret">
-If I could go back, I would tell you everything I felt.
-But this is my closure, quietly and peacefully.
-</div>
-
-<button id="btn">💌 Open My Heart</button>
-
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
-<script src="script.js"></script>
-
+    <div class="confession-container">
+        <h1>Freedom Wall Confessions</h1>
+        <div class="sticky-note" onclick="toggleConfession()">Tap to Open My Heart</div>
+        <div class="confession" id="confession">This is a heartfelt confession shared for those who want to express their feelings anonymously.</div>
+    </div>
+    <script>
+        function toggleConfession() {
+            var confession = document.getElementById('confession');
+            confession.style.display = confession.style.display === 'block' ? 'none' : 'block';
+            confession.classList.toggle('fade-up');
+        }
+    </script>
 </body>
 </html>
