@@ -1,46 +1,53 @@
-.body {
-    background: url('cork-background.jpg') repeat;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-.note {
-    background-color: rgba(255, 228, 196, 0.8);
-    border: 1px solid #f0c0a0;
-    border-radius: 8px;
-    padding: 10px;
-    width: 200px;
-    margin: 10px;
-    display: inline-block;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    animation: pop-up 0.5s ease forwards;
-}
-
-@keyframes pop-up {
-    from {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.container {
+.wall {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 20px;
+    background-color: #f0f8ff;
+    transition: background-color 0.5s;
 }
 
-@media (max-width: 600px) {
+.note {
+    background: #ffeb3b;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.note:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
     .note {
-        width: 150px;
+        flex-basis: 100%;
+        margin: 5px 0;
     }
+}
+
+@media (min-width: 769px) {
+    .note {
+        flex-basis: calc(33% - 20px);
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    background-color: #e0f7fa;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #00695c;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004d40;
+    color: white;
 }
