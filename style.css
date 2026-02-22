@@ -1,0 +1,46 @@
+.body {
+    background: url('cork-background.jpg') repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.note {
+    background-color: rgba(255, 228, 196, 0.8);
+    border: 1px solid #f0c0a0;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: pop-up 0.5s ease forwards;
+}
+
+@keyframes pop-up {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .note {
+        width: 150px;
+    }
+}
