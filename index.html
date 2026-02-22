@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freedom Wall - A Confession</title>
+    
+    <!-- Google Fonts for handwritten style -->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for pushpin and sparkle icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background with subtle texture -->
+    <div class="cork-background"></div>
+    
+    <!-- Sparkle container for floating animations -->
+    <div class="sparkles-container" id="sparklesContainer"></div>
+    
+    <!-- Main container for sticky notes -->
+    <main class="notes-container">
+        
+        <!-- Center Main Note - Freedom Wall Title -->
+        <div class="sticky-note main-note" data-delay="0">
+            <div class="pushpin"></div>
+            <div class="note-content">
+                <h1 class="main-title">Freedom Wall</h1>
+                <p class="main-subtitle">A confession by Jem</p>
+            </div>
+        </div>
+        
+        <!-- Sticky Note 1 - Yellow -->
+        <div class="sticky-note note-yellow" data-delay="1">
+            <div class="pushpin"></div>
+            <p class="note-text">I remember every little thing you said...</p>
+        </div>
+        
+        <!-- Sticky Note 2 - Pink -->
+        <div class="sticky-note note-pink" data-delay="2">
+            <div class="pushpin"></div>
+            <p class="note-text">The way you smiled made my heart skip</p>
+        </div>
+        
+        <!-- Sticky Note 3 - Blue -->
+        <div class="sticky-note note-blue" data-delay="3">
+            <div class="pushpin"></div>
+            <p class="note-text">I was too scared to say it back then</p>
+        </div>
+        
+        <!-- Sticky Note 4 - White -->
+        <div class="sticky-note note-white" data-delay="4">
+            <div class="pushpin"></div>
+            <p class="note-text">But I want you to know, it was real</p>
+        </div>
+        
+        <!-- Sticky Note 5 - Lavender -->
+        <div class="sticky-note note-lavender" data-delay="5">
+            <div class="pushpin"></div>
+            <p class="note-text">Thank you for those beautiful memories 💫</p>
+        </div>
+        
+        <!-- Sticky Note 6 - Peach -->
+        <div class="sticky-note note-peach" data-delay="6">
+            <div class="pushpin"></div>
+            <p class="note-text">I hope you found your happiness...</p>
+        </div>
+        
+    </main>
+    
+    <!-- Button to reveal hidden message -->
+    <button class="reveal-btn" id="revealBtn">💌 Open My Heart</button>
+    
+    <!-- Hidden message modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <div class="hidden-message">
+                <h2>To You</h2>
+                <p>
+                    I know we don't talk anymore, and maybe that's how it's supposed to be. 
+                    But I wanted you to know that the time I spent with you shaped who I am today. 
+                    You taught me what it feels like to care deeply about someone, 
+                    and I'll always be grateful for that.
+                </p>
+                <p>
+                    These sticky notes are my way of letting go and holding on at the same time. 
+                    Holding on to the good memories, and letting go of what could never be. 
+                    I wish you all the beautiful things in this world. 
+                </p>
+                <p>
+                    Thank you for being my "first love." 💫
+                </p>
+                <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">
+                    — From your Freedom Wall, Jem
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
