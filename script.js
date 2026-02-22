@@ -1,8 +1,7 @@
-const btn = document.getElementById("revealBtn");
-const secret = document.getElementById("secretNote");
+const btn = document.getElementById("btn");
+const secret = document.getElementById("secret");
 
-btn.addEventListener("click", () => {
-    secret.style.display = "block";
-    secret.style.animation = "noteAppear 1s ease forwards";
-    btn.style.display = "none";
+btn.addEventListener("click",()=>{
+secret.style.display="block";
+btn.style.display="none";
 });
