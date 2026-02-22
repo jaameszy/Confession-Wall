@@ -5,36 +5,107 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Patrick Hand', cursive;
-background: linear-gradient(180deg,#1f1f2e,#3a3a5c);
-min-height:100vh;
+font-family:'Quicksand', sans-serif;
+background: linear-gradient(180deg,#fff5fa,#f4f9ff);
 display:flex;
 justify-content:center;
-align-items:center;
-overflow:hidden;
 }
 
-/* Background school icons */
-.background-icons{
-position:absolute;
-width:100%;
-height:100%;
-background-image:
-url("https://cdn-icons-png.flaticon.com/512/2232/2232688.png"),
-url("https://cdn-icons-png.flaticon.com/512/3135/3135715.png");
-background-size:120px,100px;
-opacity:0.08;
-pointer-events:none;
-}
-
-/* Container */
 .container{
-width:92%;
-max-width:420px;
-background: rgba(255,255,255,0.08);
-backdrop-filter: blur(12px);
-padding:25px;
-border-radius:25px;
+width:100%;
+max-width:430px;
+padding:25px 20px 60px;
+overflow-y:auto;
+min-height:100vh;
+}
+
+/* Titles */
+.title{
+font-family:'Playfair Display', serif;
+text-align:center;
+color:#d16b9a;
+margin-top:20px;
+font-size:2.2rem;
+}
+
+.subtitle{
+text-align:center;
+color:#777;
+margin-bottom:30px;
+}
+
+/* Notes Layout */
+.notes{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+/* Sticky Notes */
+.note{
+background:white;
+padding:22px;
+border-radius:18px;
+box-shadow:
+0 10px 25px rgba(0,0,0,0.06),
+inset 0 0 10px rgba(255,255,255,0.7);
+
+font-size:1.05rem;
+line-height:1.5;
+
+opacity:0;
+transform:translateY(30px);
+
+animation:fadeUp 0.9s ease forwards;
+}
+
+/* Stagger animation */
+.note:nth-child(1){animation-delay:.2s;}
+.note:nth-child(2){animation-delay:.4s;}
+.note:nth-child(3){animation-delay:.6s;}
+.note:nth-child(4){animation-delay:.8s;}
+
+/* Hidden message */
+.hidden-note{
+margin-top:30px;
+background:#ffe7f3;
+padding:22px;
+border-radius:18px;
+line-height:1.6;
+display:none;
+animation:fadeUp 1s ease forwards;
+}
+
+/* Button */
+button{
+margin-top:25px;
+width:100%;
+padding:16px;
+border:none;
+border-radius:30px;
+font-size:1.1rem;
+background: linear-gradient(45deg,#ffb7d5,#b7dcff);
+cursor:pointer;
+transition:.3s;
+font-weight:600;
+}
+
+button:hover{
+transform:scale(1.04);
+}
+
+/* Animations */
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Scroll behavior */
+html,body{
+scroll-behavior:smooth;
+}border-radius:25px;
 text-align:center;
 color:white;
 box-shadow:0 0 40px rgba(0,0,0,0.4);
